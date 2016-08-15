@@ -19,8 +19,8 @@
 	</md-toolbar>
 
 	<md-content class="md-padding" layout="row" layout-wrap>
-		<md-card flex="33">
-			<img src="http://images2.backpage.com/imager/u/large/296732838/dcbd3cfb37d747c6d300b3e8e3c36db8.jpg"/>
+		<md-card ng-repeat="classified in classifieds" flex="30">
+			<img ng-src="{{classified.image}}"/>
 			<md-card-content>
 				<div class="classified-info">
 					<h2 class="md-title">{{ classified.title }}</h2>
