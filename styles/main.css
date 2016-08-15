@@ -3,6 +3,6 @@ button .material-icons {
 	width: 100%;
 }
 
-.md-padding img {
-	max-height: 20em;
+md-card > img {
+	max-height: 36% !important;
 }
