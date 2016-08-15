@@ -2,10 +2,34 @@
 <html>
 <head>
 	<title>ngClassifieds</title>
+	<link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
+	<link rel="stylesheet" type="text/css" href="node_modules/mdi/css/materialdesignicons.min.css" media="all">
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
 <body ng-app="ngClassifieds" ng-controller="classfiedsCtrl">
 
-	<hello-world></hello-world>
+	<md-toolbar>
+		<div class="md-toolbar-tools">
+			<p><strong>ngClassifieds</strong></p>
+			<md-button>
+				<md-icon class="mdi mdi-plus-circle">New Classified</md-icon>
+			</md-button>
+		</div>
+
+	</md-toolbar>
+
+	<md-content class="md-padding" layout="row" layout-wrap>
+		<md-card flex="33">
+			<img src="http://images2.backpage.com/imager/u/large/296732838/dcbd3cfb37d747c6d300b3e8e3c36db8.jpg"/>
+			<md-card-content>
+				<div class="classified-info">
+					<h2 class="md-title">{{ classified.title }}</h2>
+					<h3>{{classified.price}}</h3>
+					<p>{{classified.description}}</p>
+				</div>
+			</md-card-content>
+		</md-card>
+	</md-content>
 
 	<script src="node_modules/angular/angular.js"></script>
 	<script src="node_modules/angular-animate/angular-animate.js"></script>
