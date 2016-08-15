@@ -2,12 +2,16 @@
 	"use strict";
 	angular
 		.module("ngClassifieds")
-		.controller("classfiedsCtrl", function($scope, $http) {
+		.controller("classfiedsCtrl", function($scope, $http, classifiedsFactory, $mdSidenav) {
 
-			$http.get('data/classifieds.json').then(function(classifieds) {
+			classifiedsFactory.getClassifieds().then(function(classifieds) {
 				$scope.classifieds = classifieds.data;
 			});
-
-			
+			$scope.openSidebar = function() {
+				$mdSidenav('left').open();
+			}
+			$scope.closeSidebar = function() {
+				$mdSidenav('left').close();
+			}
 		});
 })();
