@@ -1,0 +1,15 @@
+{
+  "name": "ng-classifieds",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/willcook4code/ng-classifieds.git)"
+  },
+  "author": "",
+  "license": "ISC"
+}
